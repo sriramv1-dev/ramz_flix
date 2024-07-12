@@ -1,7 +1,11 @@
 
 <ul>
    <% @movies.each do |movie| %>
-        <li> <%= movie %></li>
+        <li>
+         <strong> <%= movie.title %> </strong>
+         had a rating of <%= movie.rating %>,
+         grossed <%= number_to_currency(movie.total_gross, precision: 0, unit: "₹", separator: ".", delimiter: ",") %> Crores
+        </li>
     <% end %>
 </ul>
 
