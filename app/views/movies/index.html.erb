@@ -6,6 +6,12 @@
          had a rating of <%= movie.rating %>,
          grossed <%= number_to_currency(movie.total_gross, precision: 0, unit: "₹", separator: ".", delimiter: ",") %> Crores
         </li>
+        <p>
+            <%= movie.description %>
+        </p>
+        <p>
+            <%= movie.released_on %>
+        </p>
     <% end %>
 </ul>
 
